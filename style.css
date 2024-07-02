@@ -1,0 +1,89 @@
+
+
+header, footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px
+}
+header {
+    height: 20vh;
+    background-color: #50b792;
+}
+main {
+    min-height: 70vh;
+    background-color: #c1e5d8;
+}
+footer {
+    height: 10vh;
+}
+
+.icon {
+    width: 64px;
+}
+
+.btn-nueva{
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+section{
+    background-color: #335649;
+    color: white;
+    margin: 10px;
+    border-radius: 4px;
+}
+
+details{
+    margin-left: 10px;
+    background-color: #50b792;
+    border-radius: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-right:10px ;
+}
+
+.name{
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.boxes{
+    height: 100%;
+    background-color: #335649;
+    border-radius: 10px;
+    padding-bottom: 10px;
+}
+
+.list-group{
+    background-color: #c1e5d8;
+}
+
+
+
+.icon-btn {
+    cursor: pointer;
+    transition: all 0.5s;
+}
+.fa-trash{
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.fa-trash:hover {
+    transform: scale(1.2);
+}
+
+details p {
+    padding: 20px;
+}
+
+@media (max-width: 991px) {
+
+}
+@media screen and (min-width: 576px) and (max-width: 992px){
+
+}
+@media screen and (min-width: 320px) and (max-width: 575px){
+
+}
