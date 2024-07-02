@@ -1,12 +1,17 @@
 const modalNota = new bootstrap.Modal(document.querySelector('#modalNota'), {})
 const modalNotaB = new bootstrap.Modal(document.querySelector('#modalNotaB'), {})
+const modalNotaPL = new bootstrap.Modal(document.querySelector('#modalNotaPL'), {})
 let nota = document.querySelector('#nota');
 let notaB = document.querySelector('#notaB');
+let notaPL = document.querySelector('#notaPL');
 
+
+let listaPlaylist = document.querySelector('#listaPlaylist');
 let listaNotasA = document.querySelector('#listaNotasA');
 let listaNotasB = document.querySelector('#listaNotasB');
 let listaNotasC = document.querySelector('#listaNotasC');
 let listaNotasD = document.querySelector('#listaNotasD');
+
 let sNombre = document.querySelector('#sNombre');
 let sContador = document.querySelector('#sContador');
 
@@ -20,6 +25,9 @@ function abrirModal(){
 }
 function abrirModalB(){
     modalNotaB.show();
+}
+function abrirModalPL(){
+    modalNotaPL.show();
 }
 
 function cerrar(){
@@ -84,6 +92,57 @@ function guardar2(){
     let datosB = listaNotasB.innerHTML;
     localStorage.setItem('notas', datosB);
     modalNotaB.hide();
+}
+
+
+function guardarPL(){
+    let textoPL = notaPL.value;
+
+    console.log(textoPL);
+    listaPlaylist.innerHTML += 
+    `<section>
+            <div class="boxes">
+                <h1 class="name">Playlist 3</h1>
+                <details>
+                <summary> ${textoPL} </summary>
+                <ul id="listaNotas" class="list-group">
+                    
+                </ul>
+                <button onclick="abrirModal()" type="button" class="btn btn-success btn-nueva"><i class="fa-solid fa-plus"></i> </button>
+                </details>
+        </div>
+        </section>`;
+    nota.value = '';
+    cantidad++;
+    sContador.innerText = cantidad
+    let datosPl = listaPlaylist.innerHTML;
+    localStorage.setItem('notas', datosPl);
+    modalNotaPL.hide();
+}
+
+function guardarPL1(){
+    let textoPL = notaPL.value;
+
+    console.log(textoPL);
+    listaPlaylist.innerHTML += 
+    `<section>
+            <div class="boxes">
+                <h1 class="name">Playlist 3</h1>
+                <details>
+                <summary> ${textoPL} </summary>
+                <ul id="listaNotas" class="list-group">
+                    
+                </ul>
+                <button onclick="abrirModal()" type="button" class="btn btn-success btn-nueva"><i class="fa-solid fa-plus"></i> </button>
+                </details>
+        </div>
+        </section>`;
+    nota.value = '';
+    cantidad++;
+    sContador.innerText = cantidad
+    let datosPl = listaPlaylist.innerHTML;
+    localStorage.setItem('notas', datosPl);
+    modalNotaPL.hide();
 }
 
 
