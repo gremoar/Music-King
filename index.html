@@ -13,27 +13,70 @@
     <header>
         <img src="images/Logo Music king-8.png" alt="notas" class="icon">
 
-        <h1 class="NameApp"> Music King <span id="sContador"></span></h1>
+        <h1> Music King <span id="sContador"></span></h1>
         <span id="sNombre"></span>
         <button onclick="salir()" type="button" class="btn btn-danger"> Salir </button>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#barra"
                     aria-controls="barra" aria-expanded="false" aria-label="Botón hamburguesa">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-        
+
 
     </header>
 
     <main class="container">
-        <button onclick="abrirModalPL()" type="button" class="btn btn-success btn-nueva-lista"><i class="fa-solid fa-plus"></i> </button>
-        <ul id="listaPlaylist" class="list-group">
-        
-        </ul>
-        
-    
-        
 
-        <ul id="listaPlaylist" class="list-group"></ul>
+
+
+
+        <section>
+            <div class="boxes">
+                <h1 class="name">Playlist 1</h1>
+                <details>
+                <summary> Rock Nacional</summary>
+                <ul id="listaNotasA" class="list-group">
+
+                </ul>
+                <button onclick="abrirModal()" type="button" class="btn btn-success btn-nueva"><i class="fa-solid fa-plus"></i> </button>
+                </details>
+        </div>
+        </section>
+        <section>
+            <div class="boxes">
+                <h1 class="name">Playlist 2</h1>
+                <details>
+                <summary> Rock Extranjero </summary>
+                <ul id="listaNotasB" class="list-group">
+
+                </ul>
+                <button onclick="abrirModalB()" type="button" class="btn btn-success btn-nueva"><i class="fa-solid fa-plus"></i> </button>
+                </details>
+        </div>
+        </section>
+        <section>
+            <div class="boxes">
+                <h1 class="name">Playlist 3</h1>
+                <details>
+                <summary> Electronica</summary>
+                <ul id="listaNotasC" class="list-group">
+
+                </ul>
+                <button onclick="abrirModalC()" type="button" class="btn btn-success btn-nueva"><i class="fa-solid fa-plus"></i> </button>
+                </details>
+        </div>
+        </section>
+        <section>
+            <div class="boxes">
+                <h1 class="name">Playlist <span id="p1"> </span> 4</h1>
+                <details>
+                <summary> Favoritos</summary>
+                <ul id="listaNotasD" class="list-group">
+
+                </ul>
+                <button onclick="abrirModalD()" type="button" class="btn btn-success btn-nueva"><i class="fa-solid fa-plus"></i> </button>
+                </details>
+        </div>
+        </section>
 
 
         <!-- Modal -->
@@ -59,11 +102,11 @@
         <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-            <h1 class="modal-title fs-5" id="modalNotaLabel">Nueva Canción</h1>
+            <h1 class="modal-title fs-5" ids="modalNotaLabel">Nueva Canción</h1>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <label for="">Link</label>
+                <label for="">Linka</label>
                 <textarea id="notaB" class="form-control" cols="30" rows="6"></textarea>
             </div>
             <div class="modal-footer">
@@ -73,20 +116,38 @@
         </div>
         </div>
     </div>
-    <div class="modal fade" id="modalNotaPL" tabindex="-1" aria-labelledby="modalNotaLabel" aria-hidden="true">
+    <div class="modal fade" id="modalNotaC" tabindex="-1" aria-labelledby="modalNotaLabel" aria-hidden="true">
         <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-            <h1 class="modal-title fs-5" id="modalNotaLabel">Nueva Playlist</h1>
+            <h1 class="modal-title fs-5" id="modalNotaLabel">Nueva Canción</h1>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <label for="">Link</label>
-                <textarea id="notaPL" class="form-control" cols="30" rows="6"></textarea>
+                <label for="">Linka</label>
+                <textarea id="notaC" class="form-control" cols="30" rows="6"></textarea>
             </div>
             <div class="modal-footer">
             <button onclick="cerrar()" type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-            <button onclick="guardarPL()" type="button" class="btn btn-primary">Guardar</button>
+            <button onclick="guardarC()" type="button" class="btn btn-primary">Guardar</button>
+            </div>
+        </div>
+        </div>
+    </div>
+    <div class="modal fade" id="s" tabindex="-1" aria-labelledby="modalNotaLabel" aria-hidden="true">
+        <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h1 class="modal-title fs-5" id="modalNotaLabel">Nueva Canción</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <label for="">Linka</label>
+                <textarea id="notaD" class="form-control" cols="30" rows="6"></textarea>
+            </div>
+            <div class="modal-footer">
+            <button onclick="cerrar()" type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+            <button onclick="guardarD()" type="button" class="btn btn-primary">Guardar</button>
             </div>
         </div>
         </div>
